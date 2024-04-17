@@ -80,42 +80,6 @@ elif args.model == 'gin':
     model.optimizer = torch.optim.Adam(model.parameters(), lr=0.02)
 
 
-
-# class GIN(nn.Module):
-#     def __init__(self, in_feats, hidden_dim1, out_feats):
-#         super(GIN, self).__init__()
-#         self.conv1 = GINConv(in_feats, aggregator_type='mean')
-#         self.conv2 = GINConv(hidden_dim1, aggregator_type='mean')
-#         self.activate = torch.nn.ReLU()
-
-#     def forward(self, g, input):
-#         h = self.conv1(g, input)
-#         h = self.activate(h)
-#         h = self.conv2(g, h)
-#         return h
-
-# model = GIN(config.input_dims, 48, config.output_dims)
-# model.optimizer = torch.optim.Adam(model.parameters(), lr=0.02)
-
-# class GatedGCN(nn.Module):
-#     def __init__(self, in_feats, hidden_dim1, out_feats):
-#         super(GatedGCN, self).__init__()
-#         self.conv1 = GatedGraphConv(in_feats=in_feats, out_feats=hidden_dim1, n_steps=2, n_etypes=3)
-#         self.conv2 = GatedGraphConv(in_feats=hidden_dim1, out_feats=out_feats, n_steps=2, n_etypes=3)
-#         self.activate = torch.nn.ReLU()
-
-#     def forward(self, g, input, etype):
-#         h = self.conv1(g, input, etype)
-#         h = self.activate(h)
-#         h = self.conv2(g, h, etype)
-#         return h
-
-# etype = [0, 1, 2] * 8
-# etype = torch.Tensor(etype)
-# print(etype)
-# model = GatedGCN(config.input_dims, 48, config.output_dims)
-# model.optimizer = torch.optim.Adam(model.parameters(), lr=0.05)
-
 pytorch_total_params = sum(p.numel() for p in model.parameters())
 print(f'params number: {pytorch_total_params}')
 

@@ -6,12 +6,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-from utils.datasets import DFGDataset, collate_fn, myDataset
 import dgl
 from dgl.nn.pytorch import GraphConv, SAGEConv
 import utils.metrics as metrics
 import matplotlib.pyplot as plt
-from utils.plotlib import plot_one_loss, plot_two_loss
+from utils.plotlib import plot_one_loss
 import time
 import math
 import argparse
