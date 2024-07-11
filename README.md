@@ -3,7 +3,4 @@
 
 This repo is an official implementation of TG-SCR.
 
-![figure](./assets/dasfaa2024-posterv1.pdf "TGSCR")
-
-Official implementation of TG-SCR.
 
