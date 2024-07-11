@@ -1,1 +1,1 @@
-An Implementation of TG-SCR.
+Official implementation of TG-SCR.
